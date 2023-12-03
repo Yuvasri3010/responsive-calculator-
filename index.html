@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, 
+  initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Responsive Calculator</title>
+  <h1>CALCULATOR</h1>
+
+</head><style>
+  body {
+    font-family: Times new Roman;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color:crimson;
+  }
+  h1 {
+   text-align:center;
+  }
+  
+  
+  .calculator {
+    width: 350px;
+    text-align: center;
+    background-color: cyan;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #display {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+  }
+  
+  button {
+    width: 70px;
+    height: 50px;
+    font-size: 35px;
+    margin: 3px;
+    cursor: pointer;
+    background: gray;
+    color : black;
+  
+  
+  }
+  @media screen and (max-width:600px) {
+    .calculator {
+      width: 90%;
+      max-width: none;
+    }
+    .buttons {
+      grid-template-columns: repeat(2 , 1fr);
+    }
+  }
+
+  
+</style>
+
+<body> 
+ 
+  <div class="calculator">
+  <input type="text" id="display" readonly>
+  <div class="buttons">
+    <button onclick="handleButtonClick('C')">C</button>
+    <button onclick="handleButtonClick('.')">.</button>
+    <button onclick="handleButtonClick('=')">=</button>
+    <button onclick="handleButtonClick('X')">X</button>
+
+    <button onclick="handleButtonClick('1')">1</button>
+    <button onclick="handleButtonClick('2')">2</button>
+    <button onclick="handleButtonClick('3')">3</button>
+    <button onclick="handleButtonClick('4')">4</button>
+
+    <button onclick="handleButtonClick('5')">5</button>
+    <button onclick="handleButtonClick('6')">6</button>
+    <button onclick="handleButtonClick('7')">7</button>
+    <button onclick="handleButtonClick('8')">8</button>
+
+    <button onclick="handleButtonClick('9')">9</button>
+    <button onclick="handleButtonClick('0')">0</button>
+    <button onclick="handleButtonClick('-')">-</button>
+    <button onclick="handleButtonClick('+')">+</button>
+    <button onclick="handleButtonClick('/')">/</button>
+    <button onclick="handleButtonClick('00')">00</button>
+  </div>
+</div>
+<script src="script.js"></script>
+<script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>
